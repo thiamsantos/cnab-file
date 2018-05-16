@@ -1,0 +1,80 @@
+{
+  "name": "cnab-file",
+  "version": "0.1.0",
+  "description": "Parser and generator for CNAB files",
+  "main": "dist/cnab-file.js",
+  "module": "dist/cnab-file.m.js",
+  "source": "src/index.ts",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "prelint": "prettier --write \"src/**/*.ts\" --write  --write \"test/**/*.ts\"",
+    "lint": "tslint -p . --fix -t stylish",
+    "test": "npm run lint && npm run spec",
+    "spec": "jest",
+    "spec:watch": "npm run spec -- --watch",
+    "coverage": "npm run spec -- --coverage",
+    "coverage:html": "npm run coverage && http-server ./coverage/lcov-report -o",
+    "coveralls": "npm run coverage && cat coverage/lcov.info | coveralls",
+    "clean": "rimraf dist",
+    "build": "microbundle build --sourcemap false",
+    "precommit": "npm test && npm run lint",
+    "prepublish": "npm run clean && npm test && npm run lint && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boleto-br/cnab-file.git"
+  },
+  "keywords": [
+    "boleto",
+    "cnab",
+    "file"
+  ],
+  "author": "Rafael Castro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boleto-br/cnab-file/issues"
+  },
+  "homepage": "https://github.com/boleto-br/cnab-file#readme",
+  "prettier": {
+    "singleQuote": true,
+    "semi": true,
+    "bracketSpacing": false,
+    "trailingComma": "none",
+    "tabWidth": 4,
+    "parser": "typescript"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "./node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
+  "types": "index.d.ts",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "coveralls": "^3.0.1",
+    "http-server": "^0.11.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "microbundle": "^0.4.4",
+    "prettier": "^1.12.1",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
+    "tslint-microsoft-contrib": "^5.0.3",
+    "typescript": "^2.8.3"
+  }
+}
