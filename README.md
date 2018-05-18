@@ -1,10 +1,9 @@
 # cnab-file
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/boleto-br/cnab-file.svg)](https://greenkeeper.io/)
-
 [![npm (scoped)](https://img.shields.io/npm/v/cnab-file.svg)](https://www.npmjs.com/package/cnab-file)
 [![Travis](https://img.shields.io/travis/boleto-br/cnab-file.svg)](https://travis-ci.org/boleto-br/cnab-file)
 [![Coveralls](https://img.shields.io/coveralls/boleto-br/cnab-file.svg)](https://coveralls.io/github/boleto-br/cnab-file?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/boleto-br/cnab-file.svg)](https://greenkeeper.io/)
 
 > Parser and generator for CNAB files
 
