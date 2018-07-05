@@ -69,7 +69,7 @@
     "http-server": "^0.11.1",
     "husky": "^0.14.3",
     "jest": "^22.4.3",
-    "microbundle": "^0.4.4",
+    "microbundle": "^0.5.0",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2",
     "ts-jest": "^23.0.0",
